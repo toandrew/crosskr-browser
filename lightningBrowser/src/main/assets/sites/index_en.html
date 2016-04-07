@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="author" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=2.0, user-scalable=no"> 
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="MobileOptimized" content="">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="format-detection" content="telephone=no">
+		<title>Cool Video Sites</title>
+		<link rel="stylesheet" href="assets/style.css">
+		<script>
+			function msearch(){
+				var searchArea = $("#searchArea").val();
+				window.location.href = 'https://www.google.com/search?client=crosskr&ie=UTF-8&oe=UTF-8&q='+searchArea;
+			}
+			
+			function enterSubmit(src,e)
+			{
+				if(window.event)
+            		keyPressed = window.event.keyCode; // IE
+				else
+					keyPressed = e.which; // Firefox
+				if(keyPressed==13)
+				{
+					msearch();
+				   	return false;
+				}
+	    	}
+		</script>
+	</head>
+<body>
+	<section class="pageMain">
+		<div class="searchType">
+			<form action="" method="post" class="f-box">
+				<div class="searchSelectWrap">
+					<div class="searchWrap">
+						<div class="search" id="search">Google</div>						
+						<span class="searchIco"></span>
+					</div>
+					<div class="searchList">
+						<span data-value="Google" class="sel">Google</span>
+					</div>
+				</div>
+				<input id="searchSource" value="Google" type="hidden">
+				<input class="searchArea" id="searchArea" placeholder="Searching..." onkeydown="return enterSubmit(this,event);" type="text">
+				<input class="searchBtn" value="Search" onclick="msearch()" type="button">
+			</form>
+		</div>
+
+		<h3 class="navTitle">Video Sites</h3>
+		<nav class="navList">
+			<a href="http://www.youtube.com/">
+				<span class="ico" style="background-image:url('demo/youtube.jpg')"></span>
+				<span class="text">YouTube</span>
+			</a>
+			<a href="https://vimeo.com">
+				<span class="ico" style="background-image:url('demo/vimeo.jpg')"></span>
+				<span class="text">Vimeo</span>
+			</a>
+			<a href="https://screen.yahoo.com">
+				<span class="ico" style="background-image:url('demo/yahooscreen.jpg')"></span>
+				<span class="text">Yahoo!Screen</span>
+			</a>
+			<a href="http://www.dailymotion.com">
+				<span class="ico" style="background-image:url('demo/dailymotion.jpg')"></span>
+				<span class="text">DailyMotion</span>
+			</a>
+			<a href="http://www.twitch.tv/">
+				<span class="ico" style="background-image:url('demo/twitch.jpg')"></span>
+				<span class="text">Twitch</span>
+			</a>
+			<a href="http://www.liveleak.com">
+				<span class="ico" style="background-image:url('demo/liveleak.jpg')"></span>
+				<span class="text">LiveLeak</span>
+			</a>
+			<a href="https://vine.co">
+				<span class="ico" style="background-image:url('demo/vine.jpg')"></span>
+				<span class="text">Vine</span>
+			</a>
+			<a href="http://www.ustream.tv">
+				<span class="ico" style="background-image:url('demo/ustream.jpg')"></span>
+				<span class="text">Ustream</span>
+			</a>
+			<a href="http://www.break.com/">
+				<span class="ico" style="background-image:url('demo/break.jpg')"></span>
+				<span class="text">Break</span>
+			</a>
+			<a href="http://www.tv.com/">
+				<span class="ico" style="background-image:url('demo/tv.jpg')"></span>
+				<span class="text">TV</span>
+			</a>
+			<a href="http://www.metacafe.com/">
+				<span class="ico" style="background-image:url('demo/metacafe.jpg')"></span>
+				<span class="text">MetaCafe</span>
+			</a>
+			<a href="http://www.viewster.com">
+				<span class="ico" style="background-image:url('demo/viewster.jpg')"></span>
+				<span class="text">Viewster</span>
+			</a>
+		</nav>
+	</section>
+	
+	<script src="assets/jquery-1.js"></script>
+	<script src="assets/jquery_002.js"></script>
+	<script src="assets/jquery.js"></script>
+
+</body></html>

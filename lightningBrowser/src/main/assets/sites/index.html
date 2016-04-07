@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="author" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=2.0, user-scalable=no"> 
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="MobileOptimized" content="">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="format-detection" content="telephone=no">
+		<title>酷站导航</title>
+		<link rel="stylesheet" href="assets/style.css">
+		<script>
+			function msearch(){
+				var searchArea = $("#searchArea").val();
+				//android.js('http://www.soku.com/v?keyword='+searchArea);
+				window.location.href = 'http://www.soku.com/v?keyword='+searchArea;
+			}
+			
+			function enterSubmit(src,e)
+			{
+				if(window.event)
+            		keyPressed = window.event.keyCode; // IE
+				else
+					keyPressed = e.which; // Firefox
+				if(keyPressed==13)
+				{
+					msearch();
+				   	return false;
+				}
+	    	}
+		</script>
+	</head>
+<body>
+	<!--<section class="searchTop">
+		<form action="" method="post" class="f-box">
+			<input type="text" placeholder="请输入网址或关键字" value="">
+		</form>
+	</section>-->
+
+	<section class="pageMain">
+		<div class="searchType">
+			<!--<form action="" method="post" class="f-box">
+				<div class="searchSelectWrap">
+					<span class="curLogo" id="curLogo" style="background-image:url('demo/link11.jpg');"></span>
+					<select class="searchSelect" name="">
+						<option value="" data-logo="demo/link11.jpg" selected>搜库</option>
+					</select>
+					<span class="searchSelectIco"></span>
+				</div>
+				<input type="text" class="searchArea" placeholder="搜索视频..." value="" id="searchArea" onKeyDown="return enterSubmit(this,event);">
+				<input type="button" class="searchBtn" value="搜索" onClick="msearch();">
+			</form>-->
+			<form action="" method="post" class="f-box">
+				<div class="searchSelectWrap">
+					<div class="searchWrap">
+						<div class="search" id="search">搜库</div>						
+						<span class="searchIco"></span>
+					</div>
+					<div class="searchList">
+						<span data-value="搜库" class="sel">搜库</span>
+					</div>
+				</div>
+				<input id="searchSource" value="搜库" type="hidden">
+				<input class="searchArea" id="searchArea" placeholder="搜索视频..." onkeydown="return enterSubmit(this,event);" type="text">
+				<input class="searchBtn" value="搜索" onclick="msearch()" type="button">
+			</form>
+		</div>
+
+		<h3 class="navTitle">酷站导航</h3>
+		<nav class="navList">
+			<a href="http://m.tv.sohu.com/">
+				<span class="ico" style="background-image:url('demo/link4.jpg')"></span>
+				<span class="text">搜狐视频</span>
+			</a>
+			<a href="http://m.letv.com/">
+				<span class="ico" style="background-image:url('demo/link11.jpg')"></span>
+				<span class="text">乐视网</span>
+			</a>
+			<a href="http://www.iqiyi.com/">
+				<span class="ico" style="background-image:url('demo/link2.jpg')"></span>
+				<span class="text">爱奇艺</span>
+			</a>
+			<a href="http://www.youku.com/">
+				<span class="ico" style="background-image:url('demo/link1.jpg')"></span>
+				<span class="text">优酷网</span>
+			</a>
+			<a href="http://www.tudou.com/">
+				<span class="ico" style="background-image:url('demo/link3.jpg')"></span>
+				<span class="text">土豆网</span>
+			</a>
+			<a href="http://www.hunantv.com/">
+				<span class="ico" style="background-image:url('demo/hunantv.jpg')"></span>
+				<span class="text">芒果tv</span>
+			</a>
+			<a href="http://v.ifeng.com/">
+				<span class="ico" style="background-image:url('demo/link5.jpg')"></span>
+				<span class="text">凤凰视频</span>
+			</a>
+			<a href="http://m.kankan.com/">
+				<span class="ico" style="background-image:url('demo/link10.jpg')"></span>
+				<span class="text">迅雷看看</span>
+			</a>
+			<a href="http://www.pptv.com/">
+				<span class="ico" style="background-image:url('demo/link13.jpg')"></span>
+				<span class="text">PPTV</span>
+			</a>
+			<a href="http://www.pps.tv/">
+				<span class="ico" style="background-image:url('demo/link14.jpg')"></span>
+				<span class="text">PPS</span>
+			</a>
+			<a href="http://hd.baofeng.com/">
+				<span class="ico" style="background-image:url('demo/baofeng.jpg')"></span>
+				<span class="text">暴风极致影院</span>
+			</a>
+			<a href="http://m.v.qq.com/">
+				<span class="ico" style="background-image:url('demo/link6.jpg')"></span>
+				<span class="text">腾讯视频</span>
+			</a>
+			<a href="http://www.hao123.com/video">
+				<span class="ico" style="background-image:url('demo/hao123.jpg')"></span>
+				<span class="text">hao123视频网站导航</span>
+			</a>
+			<a href="http://v.hao123.com/">
+				<span class="ico" style="background-image:url('demo/hao123.jpg')"></span>
+				<span class="text">hao123</span>
+			</a>
+			<a href="http://www.115.com/">
+				<span class="ico" style="background-image:url('demo/link15.jpg')"></span>
+				<span class="text">115网盘</span>
+			</a>
+			<a href="http://pan.baidu.com/">
+				<span class="ico" style="background-image:url('demo/link16.jpg')"></span>
+				<span class="text">百度网盘</span>
+			</a>
+		</nav>
+		<h3 class="navTitle">应用安装</h3>
+		<nav class="navList">
+			<a href="http://mobile.baidu.com/">
+				<span class="ico" style="background-image:url('demo/baidu_app.png')"></span>
+				<span class="text">百度应用</span>
+			</a>
+		</nav>
+	</section>
+	
+	<!--网站脚本加载模块开始-->
+	<script src="assets/jquery-1.js"></script>
+	<script src="assets/jquery_002.js"></script>
+	<script src="assets/jquery.js"></script>
+	<!--网站脚本加载模块结束-->
+
+</body></html>

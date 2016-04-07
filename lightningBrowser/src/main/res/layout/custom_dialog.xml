@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/custom_dialog_bg" >
+    
+	<LinearLayout 
+	    android:id="@+id/custom_dialog_title_layout"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical" >
+	    
+	    <TextView
+	        android:id="@+id/custom_dialog_title"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textColor="@color/custom_dialog_text_orange_color"
+	        android:textSize="18sp"
+	        android:padding="10dp" />
+	    
+	    <ImageView 
+	        android:layout_width="fill_parent"
+	        android:layout_height="1dp"
+	        android:background="@color/custom_dialog_text_orange_color"
+	        android:contentDescription="@string/app_name" />
+	</LinearLayout>
+	
+	<LinearLayout 
+	    android:id="@+id/custom_dialog_progress_mode_layout"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="horizontal"
+	    android:padding="20dp"
+	    android:visibility="gone"
+	    android:gravity="center" >
+	    
+	    <ProgressBar 
+	        android:id="@+id/custom_dialog_progress_bar"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" />
+	    
+	    <TextView 
+	        android:id="@+id/custom_dialog_progress_message"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textColor="@color/custom_dialog_text_color"
+	        android:textSize="18sp" />
+	</LinearLayout>
+	
+	<LinearLayout 
+	    android:id="@+id/custom_dialog_list_mode_layout"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="horizontal"
+	    android:visibility="gone" >
+	    
+	    <ListView 
+	        android:id="@+id/custom_dialog_list_view"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:cacheColorHint="#00000000"
+	        android:textColor="@android:color/white"
+	        android:fadingEdge="none" />
+	</LinearLayout>
+	
+	<LinearLayout 
+	    android:id="@+id/custom_dialog_cancle_mode_layout"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="horizontal"
+	    android:visibility="gone" >
+	    
+	    <Button 
+	        android:id="@+id/custom_dialog_cancel_mode_cancel_btn"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:background="@android:color/transparent"
+	        android:padding="20dp"
+	        android:textSize="18sp"
+	        android:textColor="@color/custom_dialog_text_color" />
+	</LinearLayout>
+	
+	<LinearLayout 
+	    android:id="@+id/custom_dialog_message_layout"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical"
+	    android:visibility="gone" >
+	    
+	    <TextView 
+	        android:id="@+id/custom_dialog_message"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:padding="10dp"
+	        android:textSize="18sp"
+	        android:textColor="@color/custom_dialog_text_color" />
+	    
+	    <ImageView
+	        android:layout_width="fill_parent"
+	        android:layout_height="1dp"
+	        android:background="@color/custom_dialog_line_gary_color"
+	        android:contentDescription="@string/app_name" />
+    </LinearLayout>
+    
+	<LinearLayout 
+	    android:id="@+id/custom_dialog_custom_view_layout"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical"
+	    android:visibility="gone" >
+	    
+    </LinearLayout>
+    
+	<RelativeLayout 
+	    android:id="@+id/custom_dialog_button_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:visibility="gone"  >
+        
+        <Button 
+	        android:id="@+id/custom_dialog_cancel_btn"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:background="@color/custom_dialog_bg"
+	        android:textSize="18sp"
+	        android:textColor="@color/custom_dialog_text_color"
+	        android:layout_toLeftOf="@+id/custom_dialog_button_layout_gary_line_1"
+	        android:visibility="gone" />
+        
+        <ImageView
+            android:id="@+id/custom_dialog_button_layout_gary_line_1"
+	        android:layout_width="1dp"
+	        android:layout_height="fill_parent"
+	        android:background="@color/custom_dialog_line_gary_color"
+	        android:contentDescription="@string/app_name"
+	        android:layout_centerInParent="true"
+	        android:visibility="gone" />
+	    
+	    <Button 
+	        android:id="@+id/custom_dialog_enter_btn"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:background="@color/custom_dialog_bg"
+	        android:textSize="18sp"
+	        android:textColor="@color/custom_dialog_text_color"
+	        android:layout_toRightOf="@id/custom_dialog_button_layout_gary_line_1"
+	        android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout>

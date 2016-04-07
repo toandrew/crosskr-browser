@@ -1,0 +1,6 @@
+include ':connectSDKAndroid'
+include ':core'
+include ':google_cast'
+include ':library'
+include ':matchstick'
+include ':lightningBrowser'

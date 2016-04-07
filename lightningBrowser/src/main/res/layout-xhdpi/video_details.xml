@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/video_stub_large" >
+
+    <ImageView android:id="@+id/nowplaying_lower_top_mask" android:background="@drawable/nowplaying_top_mask" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" />
+    <ImageView android:id="@+id/nowplaying_lower_bottom_mask" android:background="@drawable/nowplaying_bottom_mask" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+    
+    <ImageView android:id="@+id/nowplaying_upper_top_mask" android:background="@drawable/nowplaying_top_mask" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" />
+    <ImageView android:id="@+id/nowplaying_upper_bottom_mask" android:background="@drawable/nowplaying_bottom_mask" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+
+    <TextView
+        android:id="@+id/tvname"
+        android:layout_alignParentTop="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="70dip"
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/detail_titletextsize" />
+    
+    <CheckBox
+        android:id="@+id/device_hardware_decoder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvname"
+        android:checked="true"
+        android:text="Use Hardware Decoder" />
+        
+    <LinearLayout 
+        android:orientation="vertical" 
+        android:id="@+id/bottom_bar" 
+        android:paddingTop="20.0dip" 
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content" 
+        android:layout_marginBottom="5.0dip" 
+        android:layout_alignParentBottom="true">
+
+		<LinearLayout 
+	        android:orientation="horizontal"
+	        android:layout_width="fill_parent" 
+	        android:layout_height="wrap_content" 
+	        android:gravity="center">
+	        <ImageButton
+	            android:id="@+id/btnpre"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:background="@drawable/nowplaying_prev_n"
+	            android:button="@null" 
+	            android:visibility="gone"/>
+	        <ImageButton
+	            android:id="@+id/btnplay"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:background="@drawable/btn_play"
+	            android:button="@null" />
+	        <ImageButton
+	            android:id="@+id/btnnext"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:background="@drawable/nowplaying_next_n"
+	            android:button="@null" 
+	            android:visibility="gone"/>
+        </LinearLayout>
+        
+		<RelativeLayout 
+	        android:orientation="horizontal"
+	        android:layout_width="fill_parent" 
+	        android:layout_height="wrap_content" >
+	        <TextView
+	            android:id="@+id/tvcurtime"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:paddingLeft="15.0dip"
+	            android:text="00:00:00"
+	            android:textColor="#ffffff" />
+	        <TextView
+	            android:id="@+id/tvduration"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentRight="true"
+	            android:paddingRight="15.0dip" 
+	            android:text="00:00:00"
+	            android:textColor="#ffffff" />
+	    </RelativeLayout>
+
+        <SeekBar 
+	        android:gravity="center_vertical" 
+	        android:id="@+id/videoprogress" 
+	        android:layout_marginTop="-15dp"
+	        android:paddingLeft="15.0dip" 
+	        android:paddingRight="15.0dip" 
+	        android:layout_width="fill_parent" 
+	        android:layout_height="wrap_content" 
+	        android:progressDrawable="@drawable/time_indicator_progress_drawable" 
+	        android:thumb="@drawable/time_indicator_thumb" 
+	        android:thumbOffset="20.0dip"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

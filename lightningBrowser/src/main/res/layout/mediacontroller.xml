@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/mediacontroller_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/fling_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mediacontroller_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/fling_device_name"
+            style="@style/MediaController_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:ellipsize="end"
+            android:singleLine="true" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/mediacontroller_bg"
+            android:src="@drawable/line" />
+
+        <CheckBox
+            android:id="@+id/device_hardware_decoder"
+            style="@style/MediaController_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Use Hardware Decoder"
+            android:visibility="gone" />
+                
+        <TextView
+            android:id="@+id/media_info"
+            style="@style/MediaController_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:visibility="gone" />
+        
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <CheckBox
+            android:id="@+id/media_auto_play"
+            style="@style/MediaController_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/media_autoplay"
+            android:layout_alignParentLeft="true"/>
+
+      	<ImageButton
+      	    android:id="@+id/media_get_video_url_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+           	android:background="@android:color/transparent"
+            android:src="@drawable/ic_children_video_quality" 
+           	android:layout_alignTop="@id/media_auto_play"
+           	android:layout_alignBottom="@id/media_auto_play"
+           	android:layout_marginRight="5dp"/>
+      	
+      	<ProgressBar
+      	    android:id="@+id/media_get_video_url_progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+          	android:layout_gravity="center_vertical"
+          	android:layout_alignTop="@id/media_auto_play"
+           	android:layout_alignBottom="@id/media_auto_play"
+          	android:visibility="gone"/>
+      	</RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/mediacontroller_control"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/mediacontroller_bg" >
+
+        <ImageButton
+            android:id="@+id/media_route_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/mr_ic_media_route_off_holo_dark" />
+
+        <ImageButton
+            android:id="@+id/mediacontroller_play_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="1dp"
+            android:layout_toRightOf="@id/media_route_button"
+            android:background="@drawable/mediacontroller_button"
+            android:src="@drawable/mediacontroller_play" />
+
+        <TextView
+            android:id="@+id/mediacontroller_time_current"
+            style="@style/MediaController_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="1dp"
+            android:layout_toRightOf="@id/mediacontroller_play_pause" />
+
+        <TextView
+            android:id="@+id/resolution"
+            style="@style/MediaController_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/resolution"
+            android:textColor="@color/custom_dialog_text_orange_color" />
+
+        <TextView
+            android:id="@+id/mediacontroller_time_total"
+            style="@style/MediaController_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/resolution" />
+
+        <SeekBar
+            android:id="@+id/mediacontroller_seekbar"
+            style="@style/MediaController_SeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/mediacontroller_time_total"
+            android:layout_toRightOf="@id/mediacontroller_time_current"
+            android:focusable="true"
+            android:max="1000" />
+    </RelativeLayout>
+
+</LinearLayout>

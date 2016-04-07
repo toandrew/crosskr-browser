@@ -1,0 +1,43 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "com.crosskr.flint.webview.browser"
+        minSdkVersion 15
+        targetSdkVersion 23
+
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+    useLibrary 'org.apache.http.legacy'
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_6
+        targetCompatibility JavaVersion.VERSION_1_6
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+}
+
+dependencies {
+    compile project(':matchstick')
+    compile project(':library')
+    compile project(':google_cast')
+    compile 'com.android.support:appcompat-v7:21.+'
+    compile 'com.android.support:mediarouter-v7:21.+'
+    compile 'com.android.support:multidex:1.0.0'
+    compile files('libs/com.umeng.fb.5.3.0.jar')
+    compile files('libs/umeng-analytics-v5.4.2.jar')
+    compile files('libs/umeng-update-v2.6.0.1.jar')
+}

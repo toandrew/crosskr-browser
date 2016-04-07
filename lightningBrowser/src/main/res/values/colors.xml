@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="drawer_background">#ffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="light">#ffa0a0a0</color>
+    <color name="gray_dark">#222222</color>
+    <color name="gray_light">#dddddd</color>
+    <color name="gray_medium">#cdcdcd</color>
+    <color name="white">#ffffff</color>
+    <color name="gray_extra_dark">#1b1b1b</color>
+    <color name="gray_list_bg">#0d000000</color>
+    <color name="dark_text">#3f3f3f</color>
+
+
+  <color name="mediacontroller_bg_pressed">#ff53c1bd</color>
+  <color name="transparent">#00000000</color>
+  <color name="mediacontroller_bg">#99000000</color>
+
+      <color name="custom_dialog_white_bg">#90ffffff</color>
+    <color name="custom_dialog_bg">#90070401</color>
+    <color name="custom_dialog_enter_bg">#ffa3620a</color>
+    <color name="custom_dialog_cancel_bg">#ff606060</color>
+    <color name="custom_dialog_text_color">#E0E0E0</color>
+    <color name="custom_dialog_text_gary_color">#B1B1B1</color>
+    <color name="custom_dialog_text_orange_color">#F89026</color>
+    <color name="custom_dialog_line_gary_color">#434343</color>
+    
+</resources>
